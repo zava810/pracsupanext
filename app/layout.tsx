@@ -1,3 +1,11 @@
+"use client";
+import React, { useState } from 'react';
+////binaryhoriontal115.woff2  hex115.woff2 binaryvertical115.woff2
+import {
+		hin115_font, ing115_font, bangla115_font, telugu115_font,
+		mlyalm115_font, tmil115_font, kannada115_font, odia115_font,
+		sinhala115_font, pnzabi115_font, guzrati115_font, binaryvertical115_font
+} from '@/fonts';
 import DeployButton from "@/components/deploy-button";
 import { EnvVarWarning } from "@/components/env-var-warning";
 import HeaderAuth from "@/components/header-auth";
