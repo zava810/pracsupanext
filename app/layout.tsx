@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React, { useState } from 'react';
 ////binaryhoriontal115.woff2  hex115.woff2 binaryvertical115.woff2
 import {
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className} suppressHydrationWarning>
+    <html lang="en" className={ing115_font.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
         <ThemeProvider
           attribute="class"
