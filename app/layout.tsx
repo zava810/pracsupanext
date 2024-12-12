@@ -1,4 +1,4 @@
-// "use client";
+//"use client";
 import React, { useState } from 'react';
 ////binaryhoriontal115.woff2  hex115.woff2 binaryvertical115.woff2
 import {
@@ -26,29 +26,58 @@ export const metadata = {
   description: "The fastest way to build apps with Next.js and Supabase",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode; }) {
+  // https://stackoverflow.com/questions/72946973/how-to-access-a-state-of-an-component-from-another-component-in-next-js
+  // const [f, setf] = useState(ing115_font.className);
+
+  // const handlevaluechange = (selectedval: string) => {
+  //   const getFontcn = (sval:string) => {
+  //     switch (sval) {
+  //       case '0': return ing115_font.className ;
+  //       case '1': return hin115_font.className ;
+  //       case '2': return bangla115_font.className ;
+  //       case '3': return telugu115_font.className;
+  //       case '4': return mlyalm115_font.className ;
+  //       case '5': return tmil115_font.className ;      
+  //       case '6': return kannada115_font.className ;
+  //       case '7': return odia115_font.className ;
+  //       case '8': return sinhala115_font.className ;
+  //       case '9': return pnzabi115_font.className ;
+  //       case 'L': return guzrati115_font.className ;
+  //       case 'J': return binaryvertical115_font.className ;
+  //       default: return ing115_font.className ;
+  //     }
+  //   }
+  //   const selectedf = getFontcn(selectedval);
+  //   setf(selectedf);
+  // };
   return (
-    <html lang="en" className={hin115_font.className} suppressHydrationWarning>
+    <html lang="en" className={ing115_font.className} suppressHydrationWarning>
       <body className="bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
           <main className="min-h-screen flex flex-col items-center">
             <div className="flex-1 w-full flex flex-col gap-20 items-center">
               <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
                 <div className="w-full max-w-5xl flex justify-between items-center p-3 px-5 text-sm">
                   <div className="flex gap-5 items-center font-semibold">
-                    <Link href={"/"}>Next.js Supabase Starter</Link>
-                    <div className="flex items-center gap-2">
-                      <DeployButton />
-                    </div>
+                    <Link href={"/"}>next.js supabase starter</Link>
+                    <div className="flex items-center gap-2"> <DeployButton /> </div>
+                    {/* <div>
+                      <select onChange={(e) => handlevaluechange(e.target.value)}>
+                        <option value="0">iNg115_font</option>
+                        <option value="1">hin115_font</option>
+                        <option value="2">bangla115_font</option>
+                        <option value="3">telugu115_font</option>
+                        <option value="4">mlyalm115_font</option>
+                        <option value="5">tmil115_font</option>
+                        <option value="6">kannada115_font</option>
+                        <option value="7">odia115_font</option>
+                        <option value="8">sinhala115_font</option>
+                        <option value="9">pnzabi115_font</option>
+                        <option value="L">guzrati115_font</option>
+                        <option value="J">binaryvertical115_font</option>
+                      </select>
+                    </div> */}
                   </div>
                   {!hasEnvVars ? <EnvVarWarning /> : <HeaderAuth />}
                 </div>
@@ -66,7 +95,7 @@ export default function RootLayout({
                     className="font-bold hover:underline"
                     rel="noreferrer"
                   >
-                    Supabase
+                    supabase
                   </a>
                 </p>
                 <ThemeSwitcher />
